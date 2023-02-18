@@ -1,14 +1,14 @@
-package com.anushka.hirehand;
+package com.anushka.hirehand; // Anushka
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class UserProfileActivity extends AppCompatActivity {
+public class AddJobOpeningActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
+        setContentView(R.layout.activity_add_job_opening);
     }
 }

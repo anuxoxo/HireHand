@@ -1,4 +1,4 @@
-package com.anushka.hirehand;
+package com.anushka.hirehand; // Anushka
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -72,7 +72,7 @@ public class AuthActivity extends AppCompatActivity {
 
     void navigateToUser(GoogleSignInAccount account){
         finish();
-        Intent intent = new Intent(AuthActivity.this, UserActivity.class);
+        Intent intent = new Intent(AuthActivity.this, UserTypeActivity.class);
         intent.putExtra("account", account);
         startActivity(intent);
     }

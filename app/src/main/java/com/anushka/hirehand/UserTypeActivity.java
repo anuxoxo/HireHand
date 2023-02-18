@@ -1,15 +1,14 @@
-package com.anushka.hirehand;
+package com.anushka.hirehand; // Varsha
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class UserTypeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-//        varsha feuhfrefew;ev
+        setContentView(R.layout.activity_user_type);
     }
 }
