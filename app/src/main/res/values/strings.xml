@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Hire Hand</string>
     <string name="illustration">Illustration</string>
-    <string name="login_with_google">Login With Google</string>
+    <string name="login_with_google">Login with Google</string>
     <string name="logo">Logo</string>
     <string name="logo_bg">Logo BG</string>
+    <string name="submit">Submit</string>
+    <string name="company_name">Company Name</string>
+    <string name="job_position">Job Position</string>
 </resources>
