@@ -11,4 +11,6 @@
     <string name="who_are_you">Who are you?</string>
     <string name="job_seeker">Job Seeker</string>
     <string name="referrer">Referrer</string>
+    <string name="name">Name</string>
+    <string name="your_name">Your name</string>
 </resources>
