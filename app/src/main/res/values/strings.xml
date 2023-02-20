@@ -7,4 +7,8 @@
     <string name="submit">Submit</string>
     <string name="company_name">Company Name</string>
     <string name="job_position">Job Position</string>
+    <string name="hire_hand">Hire Hand</string>
+    <string name="who_are_you">Who are you?</string>
+    <string name="job_seeker">Job Seeker</string>
+    <string name="referrer">Referrer</string>
 </resources>

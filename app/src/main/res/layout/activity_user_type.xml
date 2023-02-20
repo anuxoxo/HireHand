@@ -6,38 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".UserTypeActivity">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="104dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975"
-        app:srcCompat="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="153dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="640dp"
-        android:layout_marginBottom="44dp"
-        android:text="Hire Hand"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.702"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="206dp"
@@ -45,9 +13,10 @@
         android:layout_marginStart="102dp"
         android:layout_marginEnd="103dp"
         android:layout_marginBottom="424dp"
-        android:text="Who are you?"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/who_are_you"
         android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -60,17 +29,37 @@
         android:layout_width="277dp"
         android:layout_height="89dp"
         android:backgroundTint="@color/lilac_dark"
-        android:text="Job Seeker"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="237dp" />
+        android:text="@string/job_seeker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="282dp"
         android:layout_height="91dp"
         android:backgroundTint="@color/lilac_dark"
-        android:text="Referrer"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="362dp" />
+        android:text="@string/referrer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913"
+        app:srcCompat="@drawable/black_logo"
+        android:contentDescription="@string/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
