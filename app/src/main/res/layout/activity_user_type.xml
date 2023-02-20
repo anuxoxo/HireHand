@@ -57,20 +57,20 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="245dp"
-        android:layout_height="90dp"
-        android:text="Job Seeker"
+        android:layout_width="277dp"
+        android:layout_height="89dp"
         android:backgroundTint="@color/lilac_dark"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="222dp" />
+        android:text="Job Seeker"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="237dp" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="254dp"
-        android:layout_height="95dp"
-        android:text="Referrer"
+        android:layout_width="282dp"
+        android:layout_height="91dp"
         android:backgroundTint="@color/lilac_dark"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="349dp" />
+        android:text="Referrer"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="362dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
