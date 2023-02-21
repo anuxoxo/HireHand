@@ -72,12 +72,33 @@
         app:layout_constraintVertical_bias="0.553">
 
         <ImageView
-            android:id="@+id/imageView14"
+            android:id="@+id/user_img1"
             android:layout_width="82dp"
             android:layout_height="87dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             app:srcCompat="@drawable/user" />
+
+        <TextView
+            android:id="@+id/user_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="25dp"
+            android:text="Your Name"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/user_des1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="65dp"
+            android:text="Software Tester"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -100,12 +121,33 @@
         app:layout_constraintVertical_bias="0.83">
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/user_img2"
             android:layout_width="82dp"
             android:layout_height="87dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             app:srcCompat="@drawable/user" />
+
+        <TextView
+            android:id="@+id/user_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="25dp"
+            android:text="Your Name"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/user_des2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="65dp"
+            android:text="Software Tester"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -127,19 +169,40 @@
         app:layout_constraintVertical_bias="0.271">
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/user_img3"
             android:layout_width="82dp"
             android:layout_height="87dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             app:srcCompat="@drawable/user" />
 
+        <TextView
+            android:id="@+id/user_name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="25dp"
+            android:text="Your Name"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/user_des3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="65dp"
+            android:text="Software Tester"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
     </androidx.cardview.widget.CardView>
 
     <ImageButton
         android:id="@+id/simpleImageButton2"
-        android:layout_width="218dp"
-        android:layout_height="169dp"
+        android:layout_width="181dp"
+        android:layout_height="175dp"
         android:layout_marginBottom="-80dp"
         android:layout_weight="1"
         android:adjustViewBounds="true"
