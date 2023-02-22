@@ -13,6 +13,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.HireHand"
+        android:configChanges="orientation|screenSize"
         tools:targetApi="31">
         <activity
             android:name=".SuccessActivity"
@@ -51,7 +52,8 @@
         </activity>
         <activity
             android:name=".ReferrerScreen"
-            android:exported="true">
+            android:exported="false">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
