@@ -14,14 +14,15 @@
         android:adjustViewBounds="true"
         android:padding="20dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/baseline_account_circle_24"
+        android:src="@drawable/account_circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="#FFFFFF"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/view_profile" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -36,7 +37,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/black_logo" />
+        app:srcCompat="@drawable/black_logo"
+        android:contentDescription="@string/logo" />
 
     <TextView
         android:id="@+id/textView6"
@@ -44,7 +46,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="205dp"
-        android:text="Resume Received"
+        android:text="@string/resume_received"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,17 +77,18 @@
             android:id="@+id/user_img1"
             android:layout_width="82dp"
             android:layout_height="87dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="25dp"
-            app:srcCompat="@drawable/user" />
+            app:srcCompat="@drawable/user"
+            android:contentDescription="@string/user" />
 
         <TextView
             android:id="@+id/user_name1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
+            android:layout_marginStart="125dp"
             android:layout_marginTop="25dp"
-            android:text="Your Name"
+            android:text="@string/your_name"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold" />
@@ -94,9 +97,9 @@
             android:id="@+id/user_des1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
+            android:layout_marginStart="125dp"
             android:layout_marginTop="65dp"
-            android:text="Software Tester"
+            android:text="@string/software_tester"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -124,17 +127,18 @@
             android:id="@+id/user_img2"
             android:layout_width="82dp"
             android:layout_height="87dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="25dp"
-            app:srcCompat="@drawable/user" />
+            app:srcCompat="@drawable/user"
+            android:contentDescription="@string/user" />
 
         <TextView
             android:id="@+id/user_name2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
+            android:layout_marginStart="125dp"
             android:layout_marginTop="25dp"
-            android:text="Your Name"
+            android:text="@string/your_name"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold" />
@@ -143,9 +147,9 @@
             android:id="@+id/user_des2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
+            android:layout_marginStart="125dp"
             android:layout_marginTop="65dp"
-            android:text="Software Tester"
+            android:text="@string/software_tester"
             android:textColor="@color/white"
             android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
@@ -172,17 +176,18 @@
             android:id="@+id/user_img3"
             android:layout_width="82dp"
             android:layout_height="87dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="25dp"
-            app:srcCompat="@drawable/user" />
+            app:srcCompat="@drawable/user"
+            android:contentDescription="@string/user" />
 
         <TextView
             android:id="@+id/user_name3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
+            android:layout_marginStart="125dp"
             android:layout_marginTop="25dp"
-            android:text="Your Name"
+            android:text="@string/your_name"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold" />
@@ -191,9 +196,9 @@
             android:id="@+id/user_des3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
+            android:layout_marginStart="125dp"
             android:layout_marginTop="65dp"
-            android:text="Software Tester"
+            android:text="@string/software_tester"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -201,18 +206,19 @@
 
     <ImageButton
         android:id="@+id/simpleImageButton2"
-        android:layout_width="181dp"
-        android:layout_height="175dp"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginBottom="-80dp"
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:background="#FFFFFF"
+        android:contentDescription="@string/add_job_opening"
         android:padding="20dp"
         android:scaleType="fitXY"
-        android:src="@drawable/semicircle"
+        android:src="@drawable/add_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />

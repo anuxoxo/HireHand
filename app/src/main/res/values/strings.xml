@@ -13,4 +13,10 @@
     <string name="referrer">Referrer</string>
     <string name="name">Name</string>
     <string name="your_name">Your name</string>
+    <string name="save">Save</string>
+    <string name="view_profile">View Profile</string>
+    <string name="resume_received">Resume Received</string>
+    <string name="user">user</string>
+    <string name="software_tester">Software Tester</string>
+    <string name="add_job_opening">Add Job Opening</string>
 </resources>
