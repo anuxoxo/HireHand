@@ -12,23 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/lilac_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019"
         app:srcCompat="@drawable/black_logo"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="27dp"
-        tools:ignore="ContentDescription,MissingConstraints" /><![CDATA[
-
-
-
-
-
-
-      >
-
-
-
-
-
-    ]]>
+        tools:ignore="ContentDescription,MissingConstraints" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="375dp"
@@ -40,9 +31,13 @@
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true"
-        tools:ignore="ExtraText,MissingConstraints"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="91dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12"
+        tools:ignore="ExtraText,MissingConstraints">
 
 
         <TextView
@@ -60,7 +55,7 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-           android:layout_marginStart="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="60dp"
             android:text="Job Position:Accountant"
             android:textSize="24dp"
@@ -87,18 +82,10 @@
             app:srcCompat="@drawable/ic_launcher_foreground"
             tools:ignore="ContentDescription,RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    </androidx.cardview.widget.CardView><![CDATA[
-
-
-
-
-      >
-
-
-
-    ]]>
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="375dp"
         android:layout_height="210dp"
         android:layout_margin="10dp"
@@ -108,9 +95,11 @@
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ExtraText,MissingConstraints"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="282dp" >
+        tools:layout_editor_absoluteY="291dp">
 
         <TextView
             android:id="@+id/textView10"
@@ -139,7 +128,6 @@
             android:layout_height="100dp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="60dp"
-            android:t
             android:text="Job Position:Software Developer"
             android:textSize="24dp"
             android:textStyle="bold"
@@ -167,9 +155,13 @@
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true"
-        tools:ignore="ExtraText,MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="481dp" >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ExtraText,MissingConstraints">
 
         <TextView
             android:id="@+id/textView12"
@@ -189,7 +181,6 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="60dp"
             android:text="Job Position:Data Analyst"
-            android:t
             android:textSize="24dp"
             android:textStyle="bold"
             tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
@@ -209,20 +200,14 @@
         android:id="@+id/imageView9"
         android:layout_width="44dp"
         android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02"
         app:srcCompat="@drawable/account_circle"
-        tools:ignore="ContentDescription,ImageContrastCheck,ImageContrastCheck,MissingConstraints"
-        tools:layout_editor_absoluteX="349dp"
-
-
-        tools:layout_editor_absoluteY="27dp" /><![CDATA[
-
-
-
-
-
-      >
-
-
-
-]]>
+        tools:ignore="ContentDescription,ImageContrastCheck,ImageContrastCheck,MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.622" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/jobSeekerTypeBtn"
         android:layout_width="277dp"
         android:layout_height="89dp"
         android:backgroundTint="@color/lilac_dark"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/jobSeekerTypeBtn"
         app:layout_constraintVertical_bias="0.1" />
 
     <ImageView

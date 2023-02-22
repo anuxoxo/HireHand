@@ -26,5 +26,13 @@ public class UserTypeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button jobSeekerTypeBtn = findViewById(R.id.jobSeekerTypeBtn);
+        jobSeekerTypeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserTypeActivity.this, JobSeekerActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

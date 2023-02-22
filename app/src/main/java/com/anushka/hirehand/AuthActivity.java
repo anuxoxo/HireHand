@@ -40,16 +40,12 @@ public class AuthActivity extends AppCompatActivity {
         googleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signIn();
+                Intent signIntent = gsc.getSignInIntent();
+                startActivityForResult(signIntent,1000);
             }
         });
     }
-
-    void signIn(){
-        Intent signIntent = gsc.getSignInIntent();
-        startActivityForResult(signIntent,1000);
-    }
-
+    
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
