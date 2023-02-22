@@ -4,88 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scaleX="0.7"
     android:translationZ="2dp"
     tools:context=".UserActivity">
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
-        android:layout_width="1101dp"
-        android:layout_height="478dp"
+        android:layout_width="399dp"
+        android:layout_height="172dp"
         android:layout_margin="10dp"
         app:cardBackgroundColor="#e0d4ec"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116">
+        app:layout_constraintVertical_bias="0.059">
+
 
         <ImageView
             android:id="@+id/logo2"
-            android:layout_width="468dp"
-            android:layout_height="271dp"
-            android:layout_marginLeft="280dp"
-            android:layout_marginTop="85dp"
+            android:layout_width="226dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="45dp"
             app:srcCompat="@drawable/black_logo" />
 
     </androidx.cardview.widget.CardView>
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="1097dp"
-        android:layout_height="200dp"
-        android:background="#FFFFFF"
 
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="392dp"
+        android:layout_height="52dp"
+        android:background="#FFFFFF"
         android:elevation="1dp"
+        android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416"
+        app:layout_constraintVertical_bias="0.363"
         app:srcCompat="@drawable/your_profile" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
-        android:layout_width="1097dp"
-        android:layout_height="200dp"
+        android:id="@+id/imageButton3"
+        android:layout_width="392dp"
+        android:layout_height="52dp"
         android:background="#FFFFFF"
         android:elevation="1dp"
+        android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.563"
         app:srcCompat="@drawable/file_upload" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="1097dp"
-        android:layout_height="200dp"
+        android:id="@+id/imageButton"
+        android:layout_width="392dp"
+        android:layout_height="52dp"
         android:background="#FFFFFF"
         android:elevation="1dp"
+        android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708"
+        app:layout_constraintVertical_bias="0.641"
         app:srcCompat="@drawable/jobs_applied" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
-        android:layout_width="1097dp"
-        android:layout_height="200dp"
+        android:id="@+id/imageButton2"
+        android:layout_width="392dp"
+        android:layout_height="52dp"
         android:background="#FFFFFF"
         android:elevation="1dp"
+        android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855"
+        app:layout_constraintVertical_bias="0.788"
         app:srcCompat="@drawable/logout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

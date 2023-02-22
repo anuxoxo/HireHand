@@ -22,7 +22,7 @@ public class ReferrerScreen extends AppCompatActivity {
         userProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ReferrerScreen.this, ProfileActivity.class);
+                Intent intent = new Intent(ReferrerScreen.this, UserActivity.class);
                 startActivity(intent);
             }
         });
