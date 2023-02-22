@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.39" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/referrerTypeBtn"
         android:layout_width="282dp"
         android:layout_height="91dp"
         android:backgroundTint="@color/lilac_dark"
