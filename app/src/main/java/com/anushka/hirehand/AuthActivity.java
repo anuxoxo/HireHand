@@ -3,6 +3,8 @@ package com.anushka.hirehand; // Anushka
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -69,7 +71,17 @@ public class AuthActivity extends AppCompatActivity {
     void navigateToUser(GoogleSignInAccount account){
         finish();
         Intent intent = new Intent(AuthActivity.this, UserTypeActivity.class);
-        intent.putExtra("account", account);
+        String personName = account.getDisplayName();
+        String personId = account.getId();
+        Uri personPhoto = account.getPhotoUrl();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("HIRE_HAND_USER", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("name", personName);
+        editor.putString("id", personId);
+        editor.putString("photoURL", String.valueOf(personPhoto));
+        editor.commit();
+
         startActivity(intent);
     }
 }

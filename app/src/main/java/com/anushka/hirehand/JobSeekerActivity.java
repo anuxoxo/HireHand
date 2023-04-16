@@ -2,6 +2,8 @@ package com.anushka.hirehand;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -12,6 +14,7 @@ import android.view.View;
 
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class JobSeekerActivity extends AppCompatActivity {
 
@@ -35,7 +38,20 @@ public class JobSeekerActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+
+        SharedPreferences sharedPreferences = getSharedPreferences("HIRE_HAND_USER",MODE_PRIVATE);
+        String name = sharedPreferences.getString("name",null);
+        String id = sharedPreferences.getString("id",null);
+        String photoURL = sharedPreferences.getString("photoURL",null);
+
+        Toast.makeText(this, photoURL, Toast.LENGTH_SHORT).show();
     }
+
+    public void navigateToUserFromJS(View view) {
+        Intent intent = new Intent(JobSeekerActivity.this, UserActivity.class);
+        startActivity(intent);
+    }
+
     public class MyAdapter extends BaseAdapter {
         @Override
         public int getCount()

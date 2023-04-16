@@ -48,6 +48,10 @@ public class ReferrerScreen extends AppCompatActivity {
             }
         });
     }
+    public void navigateToUserFromRS(View view) {
+        Intent intent = new Intent(ReferrerScreen.this, UserActivity.class);
+        startActivity(intent);
+    }
     public class MyAdapter extends BaseAdapter{
         @Override
         public int getCount()
