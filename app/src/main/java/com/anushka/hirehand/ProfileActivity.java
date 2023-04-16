@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 import java.io.InputStream;
 
 public class ProfileActivity extends AppCompatActivity {
+    SharedPreferences sharedPreferences;
+    String name, photoURL, resumeLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +28,25 @@ public class ProfileActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-        SharedPreferences sharedPreferences = getSharedPreferences("HIRE_HAND_USER",MODE_PRIVATE);
-        String name = sharedPreferences.getString("name",null);
-        String id = sharedPreferences.getString("id",null);
-        String photoURL = sharedPreferences.getString("photoURL",null);
+        sharedPreferences = getSharedPreferences("HIRE_HAND_USER",MODE_PRIVATE);
+        name = sharedPreferences.getString("name",null);
+        resumeLink = sharedPreferences.getString("resumeLink",null);
+        photoURL = sharedPreferences.getString("photoURL",null);
 
         new MainActivity.DownloadImageFromInternet((ImageView) findViewById(R.id.imageView6)).execute(photoURL);
         EditText yourName = findViewById(R.id.yourName);
         yourName.setText(name);
+        EditText resumeLinkET = findViewById(R.id.resumeLink);
+        resumeLinkET.setText(resumeLink);
+    }
+
+    public void saveProfileData(View v){
+        EditText resumeLinkET = findViewById(R.id.resumeLink);
+        String resumeLinkStr = resumeLinkET.getText().toString();
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("resumeLink", resumeLinkStr);
+        editor.commit();
+        Toast.makeText(this, "Saved Successfully!", Toast.LENGTH_SHORT).show();
     }
 }

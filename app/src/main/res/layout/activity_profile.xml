@@ -95,6 +95,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:onClick="saveProfileData"
         android:id="@+id/button4"
         android:layout_width="280dp"
         android:layout_height="63dp"
