@@ -89,6 +89,7 @@
         android:fontFamily="@font/roboto"
         android:padding="14dp"
         android:text="@string/submit"
+        android:onClick="addJob"
         android:textAllCaps="false"
         app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -2,6 +2,7 @@ package com.anushka.hirehand; // Anushka
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
+    SQLiteDatabase db;
 
     public static class DownloadImageFromInternet extends AsyncTask<String, Void, Bitmap> {
         ImageView imageView;
@@ -46,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+
+        db = openOrCreateDatabase("HIRE_HAND_DB", MODE_PRIVATE,null);
+        db.execSQL("CREATE TABLE IF NOT EXISTS Jobs(job_position VARCHAR, company_name VARCHAR, uploaded_by VARCHAR);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Resumes(user_name VARCHAR, user_photo VARCHAR, company_name VARCHAR, resume_link VARCHAR);");
 
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(MainActivity.this, AuthActivity.class);
