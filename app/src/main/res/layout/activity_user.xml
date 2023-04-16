@@ -39,45 +39,15 @@
         android:layout_height="52dp"
         android:background="#FFFFFF"
         android:elevation="1dp"
-        android:scaleType="fitStart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.684"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363"
-        app:srcCompat="@drawable/your_profile"
         android:onClick="navigateToProfile"
-        />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="392dp"
-        android:layout_height="52dp"
-        android:background="#FFFFFF"
-        android:elevation="1dp"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/file_upload" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="392dp"
-        android:layout_height="52dp"
-        android:background="#FFFFFF"
-        android:elevation="1dp"
-        android:scaleType="fitStart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.684"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641"
-        app:srcCompat="@drawable/jobs_applied" />
+        app:layout_constraintVertical_bias="0.364"
+        app:srcCompat="@drawable/your_profile" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -88,10 +58,10 @@
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.788"
+        app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/logout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
