@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,17 +23,48 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.InputStream;
+import java.util.Arrays;
 
 public class ReferrerScreen extends AppCompatActivity {
+    SQLiteDatabase db;
     private ListView lv_ref;
-    private String [] name = {"Your name","Your name","Your name"};
-    private int [] profile_pics ={R.drawable.user,R.drawable.user,R.drawable.user};
-    private String [] designation ={"Software Engineer","Software Engineer","Software Engineer"};
 
+    private String [] userNames = {}, userPhotos = {}, job_positions = {}, resumeLinks = {};
+    public void viewResumes() {
+        try {
+            Cursor resultSet = db.rawQuery("Select * from Resumes",null);
+            userNames = new String[resultSet.getCount()];
+            userPhotos = new String[resultSet.getCount()];
+            job_positions = new String[resultSet.getCount()];
+            resumeLinks = new String[resultSet.getCount()];
+
+            resultSet.moveToFirst();
+
+            for(int i = 0; i < resultSet.getCount(); i++){
+                userNames[i]=resultSet.getString(0);
+                userPhotos[i]=resultSet.getString(1);
+                job_positions[i] = resultSet.getString(2);
+                resumeLinks[i] = resultSet.getString(3);
+                resultSet.moveToNext();
+            }
+            resultSet.close();
+            Log.d("DB_DEBUG", Arrays.toString(userNames));
+        } catch(SQLException e){
+            Log.d("DB_DEBUG", e.getLocalizedMessage());
+        }
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_referrer_screen);
+        db = openOrCreateDatabase("HIRE_HAND_DB", MODE_PRIVATE,null);
+        try {
+            viewResumes();
+        } catch(Exception e){
+            Log.d("DB_DEBUG", e.getLocalizedMessage());
+        }
+
         lv_ref = findViewById(R.id.lv_ref);
         MyAdapter adapter = new MyAdapter();
         lv_ref.setAdapter(adapter);
@@ -42,8 +77,6 @@ public class ReferrerScreen extends AppCompatActivity {
 
         ImageButton userProfileBtn = findViewById(R.id.userProfileBtn);
         SharedPreferences sharedPreferences = getSharedPreferences("HIRE_HAND_USER",MODE_PRIVATE);
-        String name = sharedPreferences.getString("name",null);
-        String id = sharedPreferences.getString("id",null);
         String photoURL = sharedPreferences.getString("photoURL",null);
         new MainActivity.DownloadImageFromInternet((ImageView) userProfileBtn).execute(photoURL);
 
@@ -65,11 +98,17 @@ public class ReferrerScreen extends AppCompatActivity {
         });
     }
 
+    public void downloadListener(View v){
+        String uri = (String) v.getTag();
+        Intent in = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+        startActivity(in);
+    }
+
     public class MyAdapter extends BaseAdapter{
         @Override
         public int getCount()
         {
-            return profile_pics.length;
+            return userPhotos.length;
         }
         @Override
         public Object getItem(int position) {
@@ -87,9 +126,11 @@ public class ReferrerScreen extends AppCompatActivity {
             TextView user_name = convertView.findViewById(R.id.user_name);
             TextView user_des = convertView.findViewById(R.id.user_des);
             ImageView user_img = convertView.findViewById(R.id.user_img);
-            user_name.setText(name[position]);
-            user_des.setText(designation[position]);
-            user_img.setImageResource(profile_pics[position]);
+            ImageButton d1 = convertView.findViewById(R.id.d1);
+            d1.setTag(resumeLinks[position]);
+            user_name.setText(userNames[position]);
+            user_des.setText(job_positions[position]);
+            new MainActivity.DownloadImageFromInternet((ImageView) user_img).execute(userPhotos[position]);
             return  convertView;
         }
     }
