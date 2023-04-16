@@ -3,7 +3,12 @@ package com.anushka.hirehand; // Varsha
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -11,12 +16,16 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.InputStream;
 
 public class ReferrerScreen extends AppCompatActivity {
     private ListView lv_ref;
     private String [] name = {"Your name","Your name","Your name"};
     private int [] profile_pics ={R.drawable.user,R.drawable.user,R.drawable.user};
     private String [] designation ={"Software Engineer","Software Engineer","Software Engineer"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +39,14 @@ public class ReferrerScreen extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
+
         ImageButton userProfileBtn = findViewById(R.id.userProfileBtn);
+        SharedPreferences sharedPreferences = getSharedPreferences("HIRE_HAND_USER",MODE_PRIVATE);
+        String name = sharedPreferences.getString("name",null);
+        String id = sharedPreferences.getString("id",null);
+        String photoURL = sharedPreferences.getString("photoURL",null);
+        new MainActivity.DownloadImageFromInternet((ImageView) userProfileBtn).execute(photoURL);
+
         userProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,10 +64,7 @@ public class ReferrerScreen extends AppCompatActivity {
             }
         });
     }
-    public void navigateToUserFromRS(View view) {
-        Intent intent = new Intent(ReferrerScreen.this, UserActivity.class);
-        startActivity(intent);
-    }
+
     public class MyAdapter extends BaseAdapter{
         @Override
         public int getCount()

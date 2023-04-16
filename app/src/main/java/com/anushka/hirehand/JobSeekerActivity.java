@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -16,6 +21,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.InputStream;
+import java.net.URI;
+
 public class JobSeekerActivity extends AppCompatActivity {
 
     private ListView lv_js;
@@ -25,7 +33,6 @@ public class JobSeekerActivity extends AppCompatActivity {
     Button b1,b2,b3;
 
     private String [] designation ={"Job Position : Software Engineer","Job Position : Software Engineer","Job Position : Software Engineer"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +50,7 @@ public class JobSeekerActivity extends AppCompatActivity {
         String name = sharedPreferences.getString("name",null);
         String id = sharedPreferences.getString("id",null);
         String photoURL = sharedPreferences.getString("photoURL",null);
-
-        Toast.makeText(this, photoURL, Toast.LENGTH_SHORT).show();
+        new MainActivity.DownloadImageFromInternet((ImageView) findViewById(R.id.userPhoto1)).execute(photoURL);
     }
 
     public void navigateToUserFromJS(View view) {

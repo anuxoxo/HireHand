@@ -69,7 +69,6 @@ public class AuthActivity extends AppCompatActivity {
     }
 
     void navigateToUser(GoogleSignInAccount account){
-        finish();
         Intent intent = new Intent(AuthActivity.this, UserTypeActivity.class);
         String personName = account.getDisplayName();
         String personId = account.getId();
@@ -82,6 +81,7 @@ public class AuthActivity extends AppCompatActivity {
         editor.putString("photoURL", String.valueOf(personPhoto));
         editor.commit();
 
+        finish();
         startActivity(intent);
     }
 }
