@@ -30,9 +30,9 @@ public class ReferrerScreen extends AppCompatActivity {
     private ListView lv_ref;
 
     private String [] userNames = {}, userPhotos = {}, job_positions = {}, resumeLinks = {};
-    public void viewResumes() {
+    public void viewResumes(String userId) {
         try {
-            Cursor resultSet = db.rawQuery("Select * from Resumes",null);
+            Cursor resultSet = db.rawQuery("Select * from Resumes where uploaded_by = '" + userId + "';",null);
             userNames = new String[resultSet.getCount()];
             userPhotos = new String[resultSet.getCount()];
             job_positions = new String[resultSet.getCount()];
@@ -59,8 +59,11 @@ public class ReferrerScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_referrer_screen);
         db = openOrCreateDatabase("HIRE_HAND_DB", MODE_PRIVATE,null);
+        SharedPreferences sharedPreferences = getSharedPreferences("HIRE_HAND_USER",MODE_PRIVATE);
+        String userId = sharedPreferences.getString("id",null);
+
         try {
-            viewResumes();
+            viewResumes(userId);
         } catch(Exception e){
             Log.d("DB_DEBUG", e.getLocalizedMessage());
         }
@@ -76,7 +79,6 @@ public class ReferrerScreen extends AppCompatActivity {
 
 
         ImageButton userProfileBtn = findViewById(R.id.userProfileBtn);
-        SharedPreferences sharedPreferences = getSharedPreferences("HIRE_HAND_USER",MODE_PRIVATE);
         String photoURL = sharedPreferences.getString("photoURL",null);
         new MainActivity.DownloadImageFromInternet((ImageView) userProfileBtn).execute(photoURL);
 

@@ -100,9 +100,10 @@ public class JobSeekerActivity extends AppCompatActivity {
 
        JSONObject obj = (JSONObject) v.getTag();
        String job_position = obj.getString("job_position");
+       String uploaded_by = obj.getString("uploaded_by");
 
         try {
-            db.execSQL("INSERT INTO Resumes VALUES('" + user_name + "','" + user_photo + "','" + job_position +"','"+ resume_link + "');");
+            db.execSQL("INSERT INTO Resumes VALUES('" + user_name + "','" + user_photo + "','" + job_position +"','"+ resume_link + "','" + uploaded_by + "');");
             Toast.makeText(this, "Request Sent Successfully!", Toast.LENGTH_SHORT).show();
         } catch (SQLException e){
             Log.d("DB_ERROR",e.getLocalizedMessage());
@@ -142,7 +143,7 @@ public class JobSeekerActivity extends AppCompatActivity {
             try {
                 obj.put("company",companyNames[position]);
                 obj.put("job_position",jobPositions[position]);
-                obj.put("user",userIds[position]);
+                obj.put("uploaded_by", userIds[position]);
                 user_send.setTag(obj);
             } catch (JSONException e) {
                 throw new RuntimeException(e);

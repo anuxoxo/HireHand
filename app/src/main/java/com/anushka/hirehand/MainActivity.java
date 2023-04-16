@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         db = openOrCreateDatabase("HIRE_HAND_DB", MODE_PRIVATE,null);
         db.execSQL("CREATE TABLE IF NOT EXISTS Jobs(job_position VARCHAR, company_name VARCHAR, uploaded_by VARCHAR);");
-        db.execSQL("CREATE TABLE IF NOT EXISTS Resumes(user_name VARCHAR, user_photo VARCHAR, job_position VARCHAR, resume_link VARCHAR);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Resumes(user_name VARCHAR, user_photo VARCHAR, job_position VARCHAR, resume_link VARCHAR, uploaded_by VARCHAR);");
 
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(MainActivity.this, AuthActivity.class);

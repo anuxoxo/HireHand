@@ -1,5 +1,6 @@
 package com.anushka.hirehand; // Anushka
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +18,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class AuthActivity extends AppCompatActivity {
@@ -68,7 +70,8 @@ public class AuthActivity extends AppCompatActivity {
         }
     }
 
-    void navigateToUser(GoogleSignInAccount account){
+    void navigateToUser(GoogleSignInAccount account)
+    {
         Intent intent = new Intent(AuthActivity.this, UserTypeActivity.class);
         String personName = account.getDisplayName();
         String personId = account.getId();
